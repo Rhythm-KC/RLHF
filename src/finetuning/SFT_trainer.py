@@ -51,9 +51,9 @@ if __name__ == "__main__":
     train_dataset = raw_datasets["train"]
  
     def process_data(dataset):
-        return {"text":f"### Question: {dataset['instruction']} {dataset['input']}\n ### Answer: {dataset['output']}"}
+        return {"text":f"### Question: {dataset['instruction']} {dataset['input']}\n### Answer: {dataset['output']}"}
 
-    response_template = " ### Answer:"
+    response_template = "### Answer:"
     collator = DataCollatorForCompletionOnlyLM(response_template, tokenizer=tokenizer)
 
     train_dataset = train_dataset.map(process_data)
