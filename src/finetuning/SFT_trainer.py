@@ -51,7 +51,6 @@ if __name__ == "__main__":
     train_dataset = raw_datasets["train"]
  
     def process_data(dataset):
-        templete = f'###question: {}'
         return {"text":f"### Question: {dataset['instruction']} {dataset['input']}\n ### Answer: {dataset['output']}"}
 
     response_template = " ### Answer:"
