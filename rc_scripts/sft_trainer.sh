@@ -2,13 +2,13 @@
 
 #SBATCH --job-name=RKcRHLF_sft_GPT2
 #SBATCH --account pop-ml 
-#SBATCH --partition=debug
+#SBATCH --partition=tier3
 
 #SBATCH --output=sbatch_log/%x_%j.out		
 #SBATCH --error=sbatch_log/%x_%j.err	
 
 #SBATCH --cpus-per-task=4 
-#SBATCH --gres=gpu:p4:2
+#SBATCH --gres=gpu:a4:2
 #SBATCH --mem=100g
 
 #SBATCH --time=0-6:00:00
